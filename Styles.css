@@ -1,0 +1,570 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
+:root {
+    --bg-color: #FDFDE3;
+    --card-bg-color: #FCFBF4;
+    --text-color: #190B08;
+    --logo-color: #59080A;
+    --border-color: #EAE8D9;
+    --font-logo: 'Fredoka', serif;
+    --font-body: 'Fredoka', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1780px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main-header {
+    background-color: #59080A;
+    padding-bottom: 5px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    color: rgb(255, 255, 255);
+}
+
+.logo {
+    font-family: var(--font-logo);
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 550px;
+    left: 10px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    background: none;
+    padding: 5px 10px;
+    width: 100%;
+    font-family: var(--font-body);
+}
+
+.search-bar button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+.header-icons {
+    display: flex;
+    gap: 2.5rem;
+    font-size: 1.5rem;
+}
+
+.header-icons a:hover {
+    color: #000026;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin: 0;
+    padding: 6px 0;
+    color: white;
+    font-weight: 600;
+    padding-right: 5%;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+.main-nav .dropdown {
+    position: relative;
+}
+
+.main-nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #000026;
+    list-style: none;
+    padding: 10px 0;
+    margin-top: 10px;
+    border-radius: 8px;
+    min-width: 180px;
+    z-index: 100;
+    box-shadow: 0 8px 56px #ff0004;
+}
+
+.main-nav .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.main-nav .dropdown-menu li a {
+    padding: 12px 20px;
+    display: block;
+    color: white;
+    font-weight: normal;
+}
+
+.main-nav .dropdown-menu li a:hover {
+    background-color: #59080A;
+    text-decoration: none;
+}
+
+.hero-section {
+    display: flex;
+    gap: 2rem;
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    padding: 80px;
+    margin-top: 30px;
+    align-items: center;
+    max-width: 100%;
+}
+
+.hero-image {
+    flex: 1;
+    position: relative;
+    background-color: #E9E9E9;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 100%;
+    min-width: 10%;
+}
+
+.hero-image img {
+    max-width: 100%;
+    min-width: 10%;
+    height: auto;
+}
+
+.hero-image .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.arrow.left {
+    left: 15px;
+}
+
+.arrow.right {
+    right: 15px;
+}
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* ADICIONADO: Empilha os itens verticalmente */
+    justify-content: center;
+    /* ADICIONADO: Centraliza verticalmente (no eixo principal) */
+    align-items: center;
+    /* ADICIONADO: Centraliza horizontalmente (no eixo cruzado) */
+    text-align: center;
+    /* ADICIONADO: Centraliza o texto dentro de cada elemento */
+    /* REMOVIDO: position: relative; (provavelmente desnecessário para centralizar) */
+    /* REMOVIDO: padding-left: 50px; (isso impedia a centralização) */
+}
+
+.hero-content h1 {
+    font-size: 2.2rem;
+    margin: 0 0 55px 0;
+    /* REMOVIDO: flex-direction: column; (não se aplica a um h1) */
+    /* REMOVIDO: padding-left: 0%; */
+}
+
+.hero-content h2 {
+    font-size: 1.5rem;
+    margin: 0 0 20px 0;
+    font-weight: 600;
+    /* REMOVIDO: padding-right: 50%; (isso quebrava totalmente o alinhamento) */
+}
+
+.hero-content p {
+    line-height: 1.6;
+    max-width: 450px;
+    /* Manter o max-width é bom para a legibilidade */
+    margin-bottom: 30px;
+}
+
+.btn-main {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 30px;
+    left: 50%;
+}
+
+.user-avatars img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-left: -20px;
+}
+
+.user-avatars img:first-child {
+    margin-left: 0;
+}
+
+/* --- CATEGORIAS --- */
+.categories-section {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    text-align: center;
+    margin: 50px 0;
+    font-weight: 600;
+}
+
+.category-item .category-image-wrapper {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.category-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Adicione estas regras ao seu styles.css */
+
+.category-item {
+    cursor: pointer; /* Muda o cursor para a "mãozinha" ao passar o mouse */
+    transition: transform 0.2s ease-in-out; /* Adiciona uma transição suave */
+}
+
+.category-item:hover {
+    transform: scale(1.05); /* Aumenta levemente o item ao passar o mouse */
+}
+
+
+/* --- GRADE DE PRODUTOS --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.product-card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+
+    /* ===== VALOR ALTERADO AQUI ===== */
+    height: 600px;  /* Aumentado de 280px para 350px para a imagem ficar maior */
+    width: 95%;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-size: 1rem;
+    margin: 15px 0 5px 0;
+    font-weight: 600;
+    flex-grow: 1; 
+}
+
+/* Resto do seu código... */
+
+.product-card .price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.add-to-cart-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- RODAPÉ --- */
+.main-footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 30px 0;
+    font-size: 0.9rem;
+    color: white;
+    line-height: 1.5;
+    background-color: #000026;
+}
+
+/* =============================================== */
+/* ADICIONE ESTE CÓDIGO AO SEU ARQUIVO CSS         */
+/* =============================================== */
+
+/* Estilo do Overlay (fundo escurecido) */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#overlay:not(.hidden) {
+    opacity: 1;
+}
+
+/* Estilo do Carrinho Lateral */
+#carrinho-lateral {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    /* Largura do carrinho */
+    height: 100%;
+    background-color: #fdfaf3;
+    /* Cor de fundo do seu carrinho */
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+#carrinho-lateral:not(.hidden) {
+    transform: translateX(0);
+}
+
+.carrinho-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+    background-color: #000;
+    /* Cor do header do carrinho */
+    color: #fff;
+}
+
+.carrinho-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+#fechar-carrinho {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.carrinho-body {
+    flex-grow: 1;
+    overflow-y: auto;
+    /* Permite rolagem se houver muitos itens */
+    padding: 20px;
+}
+
+.item-carrinho {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.item-carrinho img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.item-info {
+    flex-grow: 1;
+}
+
+.item-nome {
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.item-desc {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 0 10px 0;
+}
+
+.item-controles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-qtd {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.item-preco {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.carrinho-footer {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.subtotal-info,
+.total-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.frete-info {
+    margin-bottom: 20px;
+}
+
+.cep-input {
+    display: flex;
+    margin-top: 5px;
+}
+
+.cep-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.cep-input button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-finalizar {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#continuar-comprando {
+    display: block;
+    text-align: center;
+    color: #555;
+    text-decoration: underline;
+}
+
+/* Classe para esconder elementos */
+.hidden {
+    display: none;
+}
+
+/* Estilos para a página carrinho.html */
+.pagina-carrinho-container {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Adicione isso ao final do seu styles.css */
+.remover-item-btn {
+    background-color: transparent;
+    border: none;
+    color: #ff0000;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 0.9rem;
+    padding: 0;
+}
