@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BeatWear - Sua Playlist</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>🎧 Sua Playlist</h1>
+    <button onclick="window.location.href='index.html'">Voltar</button>
+  </header>
+
+  <main class="playlist-section">
+    <p>Cole o link da sua playlist do <b>Spotify</b> ou <b>Deezer</b> abaixo:</p>
+
+    <input id="playlistInput" type="text" placeholder="https://open.spotify.com/playlist/...">
+    <button id="addPlaylistBtn">Adicionar Playlist</button>
+
+    <div id="playlistContainer" class="playlist-container"></div>
+  </main>
+
+  <script src="playlist.js"></script>
+</body>
+</html>

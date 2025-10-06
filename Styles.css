@@ -568,3 +568,184 @@ a {
     font-size: 0.9rem;
     padding: 0;
 }
+
+.playlist-section {
+  text-align: center;
+  padding: 40px;
+}
+
+.playlist-section input {
+  width: 60%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.playlist-section button {
+  background-color: #1db954;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.playlist-section button:hover {
+  background-color: #17a94b;
+}
+
+.playlist-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+/* Overlay para Playlist */
+#playlist-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#playlist-overlay.hidden {
+  display: none;
+}
+
+#playlist-overlay:not(.hidden) {
+  display: block;
+  opacity: 1;
+}
+
+/* Overlay (fundo escurecido) */
+#playlist-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: none;
+}
+
+#playlist-overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Overlay já existente será usado */
+#playlist-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#playlist-overlay.hidden {
+  display: none;
+}
+
+#playlist-overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Overlay para Playlist */
+#playlist-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#playlist-overlay:not(.hidden) {
+  opacity: 1;
+  display: block;
+}
+
+/* Modal lateral da Playlist */
+#playlist-lateral {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+#playlist-lateral:not(.hidden) {
+  transform: translateX(0);
+}
+
+.playlist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.playlist-header h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.playlist-header button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+#cambio-lateral {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 350px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+  padding: 20px;
+  transition: right 0.4s ease;
+  z-index: 2000;
+}
+#cambio-lateral.aberto {
+  right: 0;
+}
+.cambio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.resultado-cambio {
+  margin-top: 20px;
+  background: #f7f7f7;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
